@@ -3,7 +3,7 @@
 function ENDEDIDO_1() {
 	//alert("led on");
 	message = new Paho.MQTT.Message("L_ON");
-    	message.destinationName = "sdarmas.fie@unach.edu.ec/test";
+    	message.destinationName = "sdarmas.fie@unach.edu.ec/test1";
     	client.send(message);
 	console.log("led on");
   
@@ -11,9 +11,9 @@ function ENDEDIDO_1() {
 function ENDEDIDO_2(){	
 
 	message = new Paho.MQTT.Message("L_OFF");
-    	message.destinationName = "sdarmas.fie@unach.edu.ec/test";
+    	message.destinationName = "sdarmas.fie@unach.edu.ec/test1";
     	client.send(message);
-	console.log("led on");
+	console.log("led off");
 }
 
 
