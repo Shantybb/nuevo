@@ -1,19 +1,19 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function ENDEDIDO_1() {
+function Encender_LED() {
 	//alert("led on");
-	message = new Paho.MQTT.Message("L_ON");
+	message = new Paho.MQTT.Message("Encendido");
     	message.destinationName = "sdarmas.fie@unach.edu.ec/test1";
     	client.send(message);
-	console.log("led on");
+	console.log("led Prendido");
   
 }
-function ENDEDIDO_2(){	
+function Apagar_LED(){	
 
-	message = new Paho.MQTT.Message("L_OFF");
+	message = new Paho.MQTT.Message("Apagado");
     	message.destinationName = "sdarmas.fie@unach.edu.ec/test1";
     	client.send(message);
-	console.log("led off");
+	console.log("led Apagado");
 }
 
 
@@ -67,15 +67,11 @@ function ENDEDIDO_2(){
   // called when a message arrives
   function onMessageArrived(message) {
     text=(message.payloadString);
-    console.log(text)
-    if(text=="1"){
+    if(text=="Muy Alto"){
 	    document.getElementById("sensor").innerHTML = text;
     }
-    if(text=="0"){
+    if(text=="Muy Bajo"){
 	    document.getElementById("sensor").innerHTML = text;
     }
-    if(text=="sensor inactivo"){
-	    document.getElementById("sensor").innerHTML = text;
-   }
   }
   
