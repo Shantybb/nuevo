@@ -68,7 +68,7 @@ function LED1_Off(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-    test=(message.payloadString);
+    text=(message.payloadString);
     console.log(text)
     if(test=="1"){
       document.getElementById("sensor").innerHTML = text;
