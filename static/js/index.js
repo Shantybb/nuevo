@@ -1,6 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function EDEDIDO_1() {
+function ENDEDIDO_1() {
 	//alert("led on");
 	message = new Paho.MQTT.Message("L_ON");
     	message.destinationName = "sdarmas.fie@unach.edu.ec/test";
