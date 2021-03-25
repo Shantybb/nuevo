@@ -70,13 +70,13 @@ function LED1_Off(){
   function onMessageArrived(message) {
     text=(message.payloadString);
     console.log(text)
-    if(test=="1"){
+    if(text=="1"){
       document.getElementById("sensor").innerHTML = text;
     }
-    if(test=="0"){
+    if(text=="0"){
       document.getElementById("sensor").innerHTML = text;
     }
-    if(test=="sensor inactivo"){
+    if(text=="sensor inactivo"){
       document.getElementById("sensor").innerHTML = text;
    }
   }
