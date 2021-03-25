@@ -78,5 +78,6 @@ function LED1_Off(){
     }
     if(test=="sensor inactivo"){
       document.getElementById("sensor").innerHTML = text;
-    }
+   }
+  }
   
