@@ -5,7 +5,7 @@ function Encender_LED() {
 	message = new Paho.MQTT.Message("Encendido");
     	message.destinationName = "sdarmas.fie@unach.edu.ec/test1";
     	client.send(message);
-	console.log("led Prendido");
+	console.log("led Encendido");
   
 }
 function Apagar_LED(){	
@@ -66,12 +66,12 @@ function Apagar_LED(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-    text=(message.payloadString);
-    if(text=="Muy Alto"){
-	    document.getElementById("sensor").innerHTML = text;
+    sms=(message.payloadString);
+    if(sms=="Muy Alto"){
+	    document.getElementById("sensor").innerHTML = sms;
     }
-    if(text=="Muy Bajo"){
-	    document.getElementById("sensor").innerHTML = text;
+    if(sms=="Muy Bajo"){
+	    document.getElementById("sensor").innerHTML = sms;
     }
   }
   
