@@ -1,21 +1,19 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function LED1_On() {
+function EDEDIDO_1() {
 	//alert("led on");
-	console.log("led on");
-	//document.getElementById("sensor").innerHTML="led on";
-	message = new Paho.MQTT.Message("LED1_ON");
+	message = new Paho.MQTT.Message("L_ON");
     	message.destinationName = "sdarmas.fie@unach.edu.ec/test";
     	client.send(message);
+	console.log("led on");
   
 }
-function LED1_Off(){	
-	//alert("led off");
-	console.log("led off");
-	message = new Paho.MQTT.Message("LED1_OFF");
+function ENDEDIDO_2(){	
+
+	message = new Paho.MQTT.Message("L_OFF");
     	message.destinationName = "sdarmas.fie@unach.edu.ec/test";
     	client.send(message);
-	//document.getElementById("sensor").innerHTML="led off";
+	console.log("led on");
 }
 
 
@@ -71,13 +69,13 @@ function LED1_Off(){
     text=(message.payloadString);
     console.log(text)
     if(text=="1"){
-      document.getElementById("sensor").innerHTML = text;
+	    document.getElementById("sensor").innerHTML = text;
     }
     if(text=="0"){
-      document.getElementById("sensor").innerHTML = text;
+	    document.getElementById("sensor").innerHTML = text;
     }
     if(text=="sensor inactivo"){
-      document.getElementById("sensor").innerHTML = text;
+	    document.getElementById("sensor").innerHTML = text;
    }
   }
   
